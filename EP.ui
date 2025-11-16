@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.5" author="PygubuDesigner 0.41.4">
+  <project>
+    <settings>
+      <setting id="name">EndlessPixel App</setting>
+      <setting id="description">EndlessPixel App</setting>
+      <setting id="module_name">EndlessPixelApp</setting>
+      <setting id="template">application</setting>
+      <setting id="main_widget">game</setting>
+      <setting id="main_classname">EndlessPixelApp</setting>
+      <setting id="main_menu" />
+      <setting id="output_dir" />
+      <setting id="output_dir2" />
+      <setting id="import_tkvariables">True</setting>
+      <setting id="use_ttk_styledefinition_file">True</setting>
+      <setting id="use_i18n">True</setting>
+      <setting id="all_ids_attributes">False</setting>
+      <setting id="generate_code_onsave">True</setting>
+      <setting id="use_window_centering_code">True</setting>
+      <setting id="ttk_style_definition_file" />
+    </settings>
+    <customwidgets />
+    <resources />
+  </project>
+  <object class="tk.Toplevel" id="game" named="True">
+    <property name="height">422</property>
+    <property name="width">1223</property>
+    <child>
+      <object class="ttk.Label" id="title" named="True">
+        <property name="background">#0080ff</property>
+        <property name="compound">left</property>
+        <property name="font">{等线} 36 {bold}</property>
+        <property name="foreground">#ffffff</property>
+        <property name="image">pAHvtKS.png</property>
+        <property name="padding">40 20 40 20</property>
+        <property name="text" translatable="yes">EndlessPixel App</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas6">
+        <property name="height">40</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas3">
+        <property name="background">#ff8040</property>
+        <property name="height">16</property>
+        <property name="width">64</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas5">
+        <property name="background">#fffbf0</property>
+        <property name="height">48</property>
+        <property name="width">64</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label3">
+        <property name="background">#ffffff</property>
+        <property name="text" translatable="yes">玩家名称</property>
+        <layout manager="grid">
+          <property name="ipadx">50</property>
+          <property name="pady">10</property>
+          <property name="row">5</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry2">
+        <layout manager="grid">
+          <property name="row">5</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas7">
+        <property name="height">50</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">6</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button1">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">启动</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">3</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button2">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">实例管理</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button3">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">选择实例</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button4">
+        <property name="state">disabled</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">游戏</property>
+        <property name="width">10</property>
+        <bind sequence="&lt;Button&gt;" handler="callback" add="" />
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button5">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">下载</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button6">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">设置</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">3</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+          <property name="rowspan">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas14">
+        <property name="height">50</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">8</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label20">
+        <property name="text" translatable="yes">(C) 2024~2025 EndlessPixel Studio. All rights reserved.          EndlessPixel v1.0.2</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">19</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="download" named="True">
+    <property name="height">816</property>
+    <property name="width">1223</property>
+    <child>
+      <object class="ttk.Label" id="label1" named="True">
+        <property name="background">#0080ff</property>
+        <property name="compound">left</property>
+        <property name="font">{等线} 36 {bold}</property>
+        <property name="foreground">#ffffff</property>
+        <property name="image">pAHvtKS.png</property>
+        <property name="padding">40 20 40 20</property>
+        <property name="text" translatable="yes">EndlessPixel App</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas1">
+        <property name="height">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button11">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">游戏</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button8">
+        <property name="state">disabled</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">下载</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button9">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">设置</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">3</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label2">
+        <property name="font">{等线} 14 {bold}</property>
+        <property name="text" translatable="yes">你要安装那个版本的EndlessPixel ModePack</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas13">
+        <property name="height">40</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="combobox1">
+        <property name="height">25</property>
+        <property name="values">1.21.10-v9-1.4 1.21.10-v9-1.3 1.21.10-v9-1.2 1.21.10-v9-1.1 1.21.10-v9-1.0 1.21.10-v9-b2 1.21.10-v9-b1 1.21.9-v8-1.1 1.21.9-v8-1.0 1.21.9-v8-b5 1.21.9-v8-b4 1.21.9-v8-b3 1.21.9-v8-b2 1.21.9-v8-b1 1.21.8-v7-2.6 1.21.8-v7-2.5 1.21.8-v7-2.4 1.21.8-v7-2.3 1.21.8-v7-2.2 1.21.8-v7-2.1 1.21.8-v7-2.0 1.21.8-v7-1.9 1.21.8-v7-1.8 1.21.8-v7-1.7 1.21.8-v7-1.6 1.21.8-v7-1.5 1.21.8-v7-1.4 1.21.8-v7-1.3 1.21.8-v7-1.2 1.21.8-v7-1.1 1.21.8-v7-1.0 1.21.6-v6-b5 1.21.6-v6-b4 1.21.6-v6-b3 1.21.6-v6-b2 1.21.6-v6-b1 1.21.4-v5-1.4 1.21.4-v5-1.3 1.21.4-v5-1.2 1.21.4-v5-1.1 1.21.4-v5-1.0</property>
+        <property name="width">15</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button10">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">开始安装</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label4">
+        <property name="text" translatable="yes">最新版本更新日志</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Message" id="log" named="True">
+        <property name="borderwidth">10</property>
+        <property name="font">{等线} 10 {bold}</property>
+        <property name="justify">left</property>
+        <property name="relief">flat</property>
+        <property name="text" translatable="yes">EndlessPixel 1.21.10-v9-1.4 — Core Refinements
+Essential framework updates and quality-of-life improvements
+
+This release brings important updates to foundational libraries and key mods, ensuring better compatibility and smoother performance.
+
+⬆️ Core Framework
+fabric-api (0.136.0 → 0.138.0)
+balm (21.10.6 → 21.10.7)
+ferritecore (8.0.0 → 8.0.2)
+🚀 Performance &amp; Optimization
+c2me (0.3.6 → 0.3.5.1.0)
+lambdynamiclights (4.8.5 → 4.8.6)
+Resourcify (1.7.4 → 1.7.5)
+🎮 Gameplay &amp; Interface
+ShoulderSurfing (4.14.3 → 4.15.0)
+BetterF3 (16.0.2 → 16.0.3)
+smoothscroll (2.3.0.2 → 2.3.1)
+IMBlocker (6.0.0 → 6.0.1)
+🎨 Visual &amp; Assets
+entity_model_features (3.0.4 → 3.0.5)
+Translations for Sodium - Updated localization files
+⚙️ Technical Adjustments
+32 minor refinements across various systems
+1 bug fix addressing a specific issue
+Summary: A comprehensive maintenance update that strengthens the pack's foundation while polishing the user experience through numerous small enhancements.</property>
+        <property name="width">500</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">5</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Radiobutton" id="radiobutton1">
+        <property name="text" translatable="yes">Modrinth安装模式</property>
+        <property name="width">15</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button7">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">查看issues</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label5">
+        <property name="text" translatable="yes">(C) 2024~2025 EndlessPixel Studio. All rights reserved.          EndlessPixel v1.0.2</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">19</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="setting" named="True">
+    <property name="height">709</property>
+    <property name="width">1223</property>
+    <child>
+      <object class="ttk.Label" id="label6" named="True">
+        <property name="background">#0080ff</property>
+        <property name="compound">left</property>
+        <property name="font">{等线} 36 {bold}</property>
+        <property name="foreground">#ffffff</property>
+        <property name="image">pAHvtKS.png</property>
+        <property name="padding">40 20 40 20</property>
+        <property name="text" translatable="yes">EndlessPixel App</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Canvas" id="canvas15">
+        <property name="height">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button12">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">游戏</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">1</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button13">
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">下载</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">2</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button14">
+        <property name="state">disabled</property>
+        <property name="style">Toolbutton</property>
+        <property name="text" translatable="yes">设置</property>
+        <property name="width">10</property>
+        <layout manager="grid">
+          <property name="column">3</property>
+          <property name="padx">50</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label7">
+        <property name="text" translatable="yes">分配内存大小（mb）</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label8">
+        <property name="text" translatable="yes">进程优先级</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">3</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label9">
+        <property name="text" translatable="yes">版本隔离</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label10">
+        <property name="text" translatable="yes">游戏Java</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">5</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label11">
+        <property name="text" translatable="yes">Java虚拟机参数</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">6</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry1">
+        <property name="text" translatable="yes">4096</property>
+        <property name="width">35</property>
+        <layout manager="grid">
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="combobox2">
+        <property name="values">极低 低 中等 较高 高</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">3</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="combobox3">
+        <property name="values">不隔离 开启 仅隔离可安装mod版本 隔离非正式版 可安装mod版本和非正式版</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry3">
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">5</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry4">
+        <property name="justify">left</property>
+        <property name="text" translatable="yes">-XX:+UseG1GC -XX:-UseAdaptiveSizePolicy -XX:-OmitStackTraceInFastThrow -Djdk.lang.Process.allowAmbiguousCommands=true -Dfml.ignoreInvalidMinecraftCertificates=True -Dfml.ignorePatchDiscrepancies=True -Dlog4j2.formatMsgNoLookups=true</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">6</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label12">
+        <property name="text" translatable="yes">下载方式</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">7</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="combobox4">
+        <property name="style">text</property>
+        <property name="values">尽量使用镜像源
+ 优先使用官方源，在加载缓慢时换用镜像源 
+尽量使用官方源</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">7</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label13">
+        <property name="text" translatable="yes">最大线程数</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">8</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label14">
+        <property name="text" translatable="yes">速度限制（kb/s）</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">9</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label15">
+        <property name="text" translatable="yes">目标文件夹</property>
+        <layout manager="grid">
+          <property name="pady">3</property>
+          <property name="row">10</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry5">
+        <property name="text" translatable="yes">2048</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">9</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry6">
+        <property name="text" translatable="yes">64</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">8</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry7">
+        <property name="text" translatable="yes">./.minecraft/</property>
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">10</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label16">
+        <property name="text" translatable="yes">游戏参数</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">11</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label17">
+        <property name="text" translatable="yes">启动前执行命令</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">3</property>
+          <property name="row">12</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry8">
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">11</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry9">
+        <property name="width">40</property>
+        <layout manager="grid">
+          <property name="row">12</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label18">
+        <property name="text" translatable="yes">离线皮肤   (由于技术问题，此功能只保证对1.19.2 以前的版本有效！)</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="pady">10</property>
+          <property name="row">16</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Radiobutton" id="radiobutton2">
+        <property name="text" translatable="yes">随机</property>
+        <property name="value">1</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">50</property>
+          <property name="pady">5</property>
+          <property name="row">17</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Radiobutton" id="radiobutton3">
+        <property name="text" translatable="yes">Steve</property>
+        <property name="value">2</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">50</property>
+          <property name="pady">5</property>
+          <property name="row">17</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Radiobutton" id="radiobutton4">
+        <property name="text" translatable="yes">Alex</property>
+        <property name="value">3</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">50</property>
+          <property name="pady">5</property>
+          <property name="row">17</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Radiobutton" id="radiobutton5">
+        <property name="text" translatable="yes">正版皮肤</property>
+        <property name="value">4</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">50</property>
+          <property name="pady">5</property>
+          <property name="row">18</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry10">
+        <property name="width">30</property>
+        <layout manager="grid">
+          <property name="pady">5</property>
+          <property name="row">18</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label19">
+        <property name="text" translatable="yes">(C) 2024~2025 EndlessPixel Studio. All rights reserved.          EndlessPixel v1.0.2</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">19</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton11">
+        <property name="text" translatable="yes">要求Java 使用高性能显卡</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">13</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton12">
+        <property name="text" translatable="yes">禁用 Java Launch Wrapper</property>
+        <property name="width">20.5</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">13</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton13">
+        <property name="text" translatable="yes">禁止更新Mod</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">13</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton14">
+        <property name="text" translatable="yes">在正版登录时验证SSL证书</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">14</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton15">
+        <property name="text" translatable="yes">游戏语言自动设置为中文</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">14</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton16">
+        <property name="text" translatable="yes">启动游戏前进行内存优化</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">14</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton17">
+        <property name="text" translatable="yes">关闭文件校验</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">15</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="pygubu.forms.ttkwidget.Checkbutton" id="checkbutton18">
+        <property name="text" translatable="yes">忽略Java 兼容性警告</property>
+        <property name="width">20</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">15</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label21">
+        <property name="font">{等线} 20 {bold}</property>
+        <property name="text" translatable="yes">设置</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="row">1</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
