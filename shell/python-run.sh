@@ -1,1 +1,1 @@
-python EndlessPixelAppui.py
+python "../EndlessPixelAppui.py"

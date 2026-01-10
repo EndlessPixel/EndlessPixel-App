@@ -1,3 +1,3 @@
 @echo off
-python EndlessPixelAppui.py
+python "../EndlessPixelAppui.py"
 pause
